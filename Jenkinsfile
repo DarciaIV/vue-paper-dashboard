@@ -7,20 +7,10 @@ pipeline {
                 git url: 'https://github.com/DarciaIV/vue-paper-dashboard'
             }
         }
-        stage('Preparing dependencies') {
+        stage('Show README.md') {
             steps {
                 sh 'ls -l'
-                sh 'npm install'
-            }
-        }
-        stage('Build project') {
-            steps {
-                sh 'npm run build'
-            }
-        }
-        stage('Archive the artifact') {
-            steps {
-                sh 'sudo zip -r dist dist/'
+                sh 'cat README.md'
             }
         }
     }
