@@ -13,7 +13,7 @@ pipeline {
                 sh 'cat README.md'
             }
         }
-      stage('Show README.md') {
+      stage('Show NewFile1') {
             steps {
                 sh 'echo JENKINS >> NewFile1'
                 sh 'cat NewFile1'
